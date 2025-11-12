@@ -1,0 +1,122 @@
+.content.actor-detail {
+  .container {
+    .actor-info-container {
+      padding: 60px 0px;
+
+      .actor-info-content-container {
+        display: flex;
+        gap: 24px;
+      }
+
+      .actor-info-content {
+        flex: 1;
+        padding: 20px 0;
+        color: #fff;
+
+        .actor-info-name {
+          font-size: 30px;
+          font-weight: 500;
+          line-height: 26px; /* 86.667% */
+          letter-spacing: 0.3px;
+          padding-bottom: 12px;
+        }
+        .actor-info-list {
+          padding-bottom: 18px;
+          .actor-info-item {
+            font-size: 13px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 17px; /* 130.769% */
+            letter-spacing: 0.3px;
+          }
+        }
+        .actor-info-description.pc {
+          font-size: 13px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 17px; /* 130.769% */
+          letter-spacing: 0.3px;
+
+          span {
+            padding-right: 18px;
+          }
+
+          .actor-info-more {
+            color: inherit;
+            font-size: 13px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 17px; /* 130.769% */
+            letter-spacing: 0.3px;
+          }
+        }
+      }
+
+      .actor-info-description.mo {
+        display: none;
+        justify-content: space-between;
+        padding-bottom: 34px;
+        border-bottom: 1px solid #404040;
+
+        span {
+          color: #8c8c8c;
+          font-size: 13px;
+          font-weight: 500;
+          line-height: 17px; /* 130.769% */
+          letter-spacing: 0.3px;
+        }
+        button {
+          cursor: pointer;
+          color: #fff;
+          font-size: 13px;
+          font-weight: 500;
+          line-height: 17px; /* 130.769% */
+          letter-spacing: 0.3px;
+        }
+      }
+
+      @media (max-width: 800px) {
+        padding: 60px 20px;
+
+        .actor-info-content-container {
+          gap: 4px;
+        }
+        .actor-info-description.mo {
+          display: flex;
+        }
+
+        .actor-info-content {
+          padding: 8px 0;
+
+          .actor-info-name {
+            font-size: 26px;
+            font-weight: 500;
+            line-height: 26px;
+            padding-bottom: 6px;
+          }
+
+          .actor-info-list {
+            padding-bottom: 8px;
+            .actor-info-item {
+              font-size: 13px;
+              font-style: normal;
+              font-weight: 500;
+              line-height: 17px; /* 130.769% */
+              letter-spacing: 0.3px;
+            }
+          }
+          .actor-info-description.pc {
+            display: none;
+          }
+        }
+      }
+    }
+    .actor-credit-container {
+      .actor-credit-title {
+        padding-bottom: 22px;
+      }
+      .actor-credit-list {
+      }
+    }
+  }
+}

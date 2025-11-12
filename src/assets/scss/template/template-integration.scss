@@ -1,0 +1,48 @@
+@use "./header";
+@use "./sidebar";
+@use "./content";
+
+#app {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+
+  .container {
+    padding-right: 53px;
+  }
+
+  .sidebar {
+    width: 280px;
+    height: 100%;
+
+    &.collapsed {
+      width: 100px;
+    }
+  }
+
+  .layout-main {
+    flex: 1;
+    height: 100%;
+    overflow-x: hidden;
+    padding-bottom: 28px;
+  }
+
+  @media (max-width: 800px) {
+    .container {
+      padding-right: 0;
+    }
+    .sidebar {
+      transform: translateX(-100%);
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+      transition: transform 0.3s ease;
+      background: #404040;
+
+      &.mobile-open {
+        transform: translateX(0);
+      }
+    }
+  }
+}

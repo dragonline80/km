@@ -1,0 +1,209 @@
+// 다크모드 (기본)
+body.dark-mode {
+  background: #1f1d2b;
+  color: #fff;
+
+  .header {
+    .search-container {
+      background: rgba(255, 255, 255, 0.1);
+    }
+
+    .search-input {
+      color: #fff;
+
+      &::placeholder {
+        color: #808191;
+      }
+    }
+
+    .profile-name {
+      color: #fff;
+    }
+
+    .logo {
+      color: #fff;
+    }
+  }
+
+  .sidebar {
+    background: #1e2127;
+    border-right: 1px solid #34373c;
+
+    .sidebar-title {
+      color: #fff;
+    }
+
+    .sidebar-group-item-title {
+      color: #808191;
+    }
+
+    .sidebar-menu-item {
+      span {
+        color: #fff;
+      }
+    }
+
+    .toggle-label {
+      color: #808191;
+    }
+  }
+}
+
+// 라이트모드
+body.light-mode {
+  background: #ffffff;
+  color: #ccc;
+
+  .header {
+    .search-container {
+      background: rgba(0, 0, 0, 0.05);
+    }
+
+    .search-input {
+      color: #ccc;
+      font-weight: 500;
+
+      &::placeholder {
+        color: #ccc;
+      }
+    }
+
+    .profile-name {
+      color: #ccc;
+      font-weight: 500;
+    }
+
+    .logo {
+      color: #ccc;
+      font-weight: 600;
+    }
+  }
+
+  .sidebar {
+    background: #ffffff;
+    border-right: 1px solid #e0e0e0;
+
+    .sidebar-title {
+      color: #ccc;
+      font-weight: 600;
+    }
+
+    .sidebar-group-item-title {
+      color: #ccc;
+      font-weight: 600;
+    }
+
+    .sidebar-menu-item {
+      span {
+        color: #ccc;
+        font-weight: 500;
+      }
+    }
+
+    .toggle-label {
+      color: #ccc;
+      font-weight: 500;
+    }
+  }
+
+  // 페이지 컨텐츠
+  .content {
+    color: #ccc;
+  }
+
+  // 카드 배경
+  .subscribe-video-item,
+  .subscribe-video-card,
+  .actor-credit-item,
+  .video-item {
+    background: #ffffff;
+    border: 1px solid #e0e0e0;
+  }
+
+  // 텍스트 색상
+  .subscribe-title,
+  .article-title {
+    color: #ccc;
+    font-weight: 600;
+  }
+
+  .subscribe-channel-name,
+  .subscribe-video-title,
+  .feed-title,
+  .feed-actor-name {
+    color: #ccc;
+    font-weight: 500;
+  }
+
+  .subscribe-management-text {
+    color: #ccc;
+    font-weight: 500;
+  }
+
+  // 메타데이터
+  .subscribe-video-meta,
+  .feed-actor-view-info,
+  .actor-credit-item-view-info,
+  .video-item-view-info {
+    color: #ccc;
+    font-weight: 400;
+  }
+
+  // 추가 텍스트 요소들
+  .category-item-title,
+  .feed-content-list li,
+  .actor-credit-item-description {
+    color: #ccc;
+    font-weight: 400;
+  }
+
+  // 버튼 텍스트
+  button {
+    color: #ccc;
+  }
+
+  // 페이지네이션
+  .pagination-number,
+  .pagination-btn {
+    color: #ccc;
+
+    &.active {
+      color: #ccc;
+      font-weight: 600;
+    }
+  }
+
+  // 카테고리 버튼
+  .category-item {
+    &.active {
+      .category-item-title {
+        color: #ccc;
+        font-weight: 600;
+      }
+    }
+
+    .category-item-title {
+      color: #ccc;
+    }
+  }
+
+  // 모든 텍스트 요소를 #ccc로
+  * {
+    color: inherit;
+  }
+
+  // 특정 요소들의 색상을 명시적으로 #ccc로
+  p,
+  span,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  div,
+  a,
+  li {
+    color: #ccc;
+  }
+}

@@ -1,0 +1,14 @@
+@use "./font";
+@use "./reset";
+@use "./template/template-integration";
+@use "./pages/page-integration";
+@use "./theme";
+
+* {
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: #1f1d2b;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}

@@ -1,0 +1,17 @@
+.content.watch-later {
+  padding-top: 50px;
+
+  .container {
+    .saved-video-container {
+      .saved-video-title {
+        padding-bottom: 19px;
+      }
+      .saved-video-list {
+      }
+    }
+  }
+
+  @media (max-width: 800px) {
+    padding-top: 28px;
+  }
+}

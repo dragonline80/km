@@ -1,0 +1,197 @@
+.content.subscribe-setting {
+  padding-top: 40px;
+
+  .container {
+    .subscribe-setting-container {
+      .subscribe-setting-header {
+        padding-bottom: 26px;
+
+        .subscribe-setting-title {
+          color: #fff;
+          font-size: 28px;
+          font-weight: 500;
+          line-height: 28px;
+        }
+
+        @media (max-width: 800px) {
+          padding: 0 20px 26px;
+
+          .subscribe-setting-title {
+            font-size: 20px;
+            font-weight: 600;
+            line-height: 20px;
+          }
+        }
+      }
+
+      .subscribe-channel-list {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+
+        .subscribe-channel-item {
+          display: flex;
+          align-items: flex-start;
+          gap: 16px;
+          padding: 20px;
+          border-bottom: 1px solid #34373c;
+          position: relative;
+
+          &:last-child {
+            border-bottom: none;
+          }
+
+          .subscribe-channel-avatar {
+            flex-shrink: 0;
+          }
+
+          .subscribe-channel-info {
+            flex: 1;
+            min-width: 0;
+
+            .subscribe-channel-name {
+              color: #fff;
+              font-size: 16px;
+              font-weight: 500;
+              line-height: 16px;
+              margin-bottom: 8px;
+            }
+
+            .subscribe-channel-date {
+              color: #808191;
+              font-size: 12px;
+              line-height: 12px;
+              margin-bottom: 8px;
+            }
+
+            .subscribe-channel-description {
+              color: #fff;
+              font-size: 14px;
+              line-height: 20px;
+              word-break: keep-all;
+
+              .description-text {
+                display: inline;
+              }
+
+              .description-more-btn {
+                background: transparent;
+                border: none;
+                color: #808191;
+                font-size: 14px;
+                cursor: pointer;
+                padding: 0;
+                margin-left: 4px;
+
+                &:hover {
+                  color: #fff;
+                }
+              }
+            }
+          }
+
+          .subscribe-channel-actions {
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+
+            .subscribe-unsubscribe-btn {
+              display: flex;
+              align-items: center;
+              gap: 8px;
+              background: #ff5f57;
+              border: none;
+              border-radius: 8px;
+              padding: 10px 16px;
+              color: #fff;
+              font-size: 14px;
+              font-weight: 500;
+              cursor: pointer;
+              transition: all 0.2s;
+
+              &:hover {
+                background: #ff4d44;
+              }
+
+              .icon {
+                width: 20px;
+                height: 20px;
+              }
+            }
+
+            .subscribe-more-btn {
+              width: 32px;
+              height: 32px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              background: transparent;
+              border: none;
+              cursor: pointer;
+              color: #8c8c8c;
+              transition: all 0.2s;
+
+              &:hover {
+                color: #fff;
+              }
+
+              .icon {
+                width: 20px;
+                height: 20px;
+              }
+            }
+          }
+        }
+
+        @media (max-width: 800px) {
+          padding: 0 20px;
+
+          .subscribe-channel-item {
+            padding: 16px 0;
+          }
+        }
+      }
+
+      .subscribe-setting-divider {
+        height: 1px;
+        background: #34373c;
+        margin: 20px 0;
+
+        @media (max-width: 800px) {
+          margin: 20px;
+        }
+      }
+
+      .subscribe-setting-footer {
+        display: flex;
+        justify-content: flex-end;
+        padding: 20px;
+
+        .subscribe-reset-btn {
+          background: #2c2c2c;
+          border: none;
+          border-radius: 8px;
+          padding: 12px 24px;
+          color: #fff;
+          font-size: 14px;
+          font-weight: 500;
+          cursor: pointer;
+          transition: all 0.2s;
+
+          &:hover {
+            background: #3c3c3c;
+          }
+        }
+
+        @media (max-width: 800px) {
+          padding: 20px;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 800px) {
+    padding-top: 28px;
+  }
+}
+

@@ -1,0 +1,291 @@
+.content.home {
+  padding-top: 40px;
+
+  .container {
+    .feed-container {
+      padding-bottom: 60px;
+
+      .category-container {
+        position: relative;
+        padding-bottom: 26px;
+
+        .category-list {
+          overflow: hidden;
+          display: flex;
+          gap: 13px;
+
+          .category-item {
+            cursor: pointer;
+            background: #2c2c2c;
+            padding: 12px;
+            width: 112px;
+            flex-shrink: 0;
+            border-radius: 8px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .category-item-title {
+              color: #fff;
+
+              font-size: 16px;
+              line-height: 100%;
+            }
+
+            &.active {
+              background: #fff;
+              .category-item-title {
+                color: #050404;
+              }
+            }
+          }
+        }
+
+        .category-arrow-right-icon {
+          position: absolute;
+          right: 0;
+          top: 0%;
+          transform: translate(100%, -4px);
+          width: 48px;
+          height: 48px;
+        }
+
+        @media (max-width: 800px) {
+          .category-arrow-right-icon {
+            display: none;
+          }
+
+          .category-list {
+            padding: 0 20px;
+            .category-item {
+              width: auto;
+              height: 40px;
+              padding: 12px;
+            }
+          }
+        }
+      }
+
+      .feed-list {
+        display: flex;
+        gap: 21px;
+
+        .feed-item {
+          padding: 40px;
+          position: relative;
+          border-radius: 20px;
+          overflow: hidden;
+          min-height: 250px;
+
+          .feed-title {
+            color: #fff;
+            font-size: 30px;
+            font-weight: 600;
+            line-height: 36px; /* 120% */
+            letter-spacing: 0.3px;
+            white-space: pre-line;
+          }
+          .feed-image {
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: -1;
+            width: 100%;
+            height: 100%;
+
+            img {
+              width: 100%;
+              height: 100%;
+            }
+          }
+        }
+        .main-feed-container {
+          position: relative;
+          flex: 2.23;
+          aspect-ratio: 1.98 / 1;
+
+          .feed-content {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            padding-bottom: 60px;
+            .feed-actor-container {
+              display: flex;
+              gap: 11px;
+
+              .feed-actor-info-container {
+                display: flex;
+                align-items: center;
+                .feed-actor-info {
+                  .feed-actor-name {
+                    color: #fff;
+                    font-size: 12px;
+                    line-height: 12px;
+                    letter-spacing: 0.5px;
+                    padding-bottom: 10px;
+                  }
+                  .feed-actor-view-info {
+                    color: #fff;
+                    font-size: 12px;
+                    line-height: 12px;
+                    letter-spacing: 0.5px;
+                    opacity: 0.8;
+                  }
+                }
+              }
+            }
+          }
+        }
+        .sub-feed-container {
+          position: relative;
+          flex: 1;
+          aspect-ratio: 0.96 / 1;
+
+          .feed-title {
+            padding-bottom: 22px;
+          }
+          .feed-content-list {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+
+            li {
+              color: #fff;
+
+              font-size: 15px;
+
+              font-weight: 500;
+              line-height: 15px;
+              letter-spacing: 0.5px;
+            }
+          }
+
+          .feed-unknown {
+            position: absolute;
+            right: 20px;
+            bottom: 20px;
+            width: 51px;
+            height: 20px;
+            border-radius: 6px;
+            background: rgb(31 29 43 / 50%);
+          }
+        }
+      }
+
+      @media (max-width: 1300px) {
+        .feed-list {
+          .feed-item {
+            .feed-title {
+              font-size: 20px;
+              line-height: 1.2;
+            }
+          }
+          .main-feed-container {
+            .feed-content {
+              padding-bottom: 20px;
+              .feed-actor-container {
+                .feed-actor-image {
+                  display: none;
+                }
+              }
+            }
+          }
+          .sub-feed-container {
+          }
+        }
+      }
+      @media (max-width: 1100px) {
+        .feed-list {
+          flex-wrap: nowrap;
+
+          .feed-item {
+            flex: auto;
+            width: 90%;
+            min-width: 300px;
+            min-height: 210px;
+            max-height: 300px;
+          }
+          .main-feed-container {
+            flex-shrink: 0;
+            .feed-content {
+              padding-bottom: 0;
+            }
+          }
+          .sub-feed-container {
+            flex-shrink: 0;
+
+            .feed-content {
+              display: none;
+            }
+          }
+        }
+      }
+      @media (max-width: 800px) {
+        .feed-list {
+          padding-left: 9px;
+
+          .feed-item {
+            width: 80%;
+          }
+        }
+      }
+      @media (max-width: 500px) {
+        .feed-list {
+          .feed-item {
+            padding: 23px 16px;
+            height: 210px;
+
+            .feed-title {
+              font-size: 16px;
+              line-height: 1.2;
+            }
+          }
+
+          .main-feed-container {
+            .feed-content {
+              .feed-actor-container {
+                .feed-actor-info-container {
+                  .feed-actor-info {
+                    .feed-actor-name {
+                      padding-bottom: 0;
+                    }
+                    .feed-actor-view-info {
+                      display: none;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    @media (max-width: 1000px) {
+    }
+
+    .most-viewed-video-container {
+      .most-viewed-video-title {
+        padding-bottom: 28px;
+      }
+      .most-viewed-video-list {
+        @media (max-width: 450px) {
+          .actor-credit-item {
+            display: none;
+
+            &:nth-child(1),
+            &:nth-child(2) {
+              display: block;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 800px) {
+    padding-top: 28px;
+  }
+}

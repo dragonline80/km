@@ -1,0 +1,583 @@
+.my-history {
+  padding: 40px 0;
+  min-height: 100vh;
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  .my-history-container {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  // Top User Info
+  .my-history-top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    margin-bottom: 40px;
+
+    .my-history-top-avatar {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      overflow: hidden;
+      background: #fff;
+      flex-shrink: 0;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    .my-history-top-info {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+
+      .my-history-top-name {
+        color: #fff;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 1.5;
+        margin: 0;
+      }
+
+      .my-history-top-points {
+        color: #808191;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 1.5;
+      }
+    }
+  }
+
+  // Section Styling
+  .my-history-section {
+    margin-bottom: 40px;
+    position: relative;
+    padding-bottom: 40px;
+
+    &:not(:last-child)::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: #34373c;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+
+    .my-history-section-title {
+      color: #fff;
+      font-size: 20px;
+      font-weight: 700;
+      margin-bottom: 24px;
+      position: relative;
+      display: inline-block;
+      padding-bottom: 8px;
+
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background: #00b8ff;
+      }
+    }
+  }
+
+  // Comment List Styling
+  .my-history-comment-list {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin-bottom: 24px;
+
+    .my-history-comment-item {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+
+      .my-history-comment-video-area {
+        display: flex;
+        gap: 16px;
+        align-items: flex-start;
+
+        .my-history-video-thumbnail {
+          width: 120px;
+          height: 80px;
+          border-radius: 8px;
+          overflow: hidden;
+          flex-shrink: 0;
+
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+
+        .my-history-video-details {
+          flex: 1;
+          display: flex;
+          flex-direction: column;
+          gap: 4px;
+
+          .my-history-video-title {
+            color: #fff;
+            font-size: 16px;
+            font-weight: 600;
+            line-height: 1.4;
+            margin: 0;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;
+          }
+
+          .my-history-channel-name {
+            color: #fff;
+            font-size: 13px;
+            font-weight: 400;
+            display: block;
+          }
+
+          .my-history-video-meta {
+            color: #fff;
+            font-size: 12px;
+            font-weight: 400;
+          }
+        }
+      }
+
+      .my-history-comment-details-area {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        position: relative;
+        padding-left: 0; // Align with video thumbnail start
+
+        .my-history-comment-header {
+          display: flex;
+          align-items: center;
+          gap: 8px;
+
+          .my-history-comment-profile {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            overflow: hidden;
+            background: #fff;
+            flex-shrink: 0;
+
+            img {
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+            }
+          }
+
+          .my-history-commenter-name {
+            color: #fff;
+            font-size: 14px;
+            font-weight: 600;
+          }
+
+          .my-history-comment-time {
+            color: #808191;
+            font-size: 12px;
+            font-weight: 400;
+          }
+        }
+
+        .my-history-comment-text {
+          color: #fff;
+          font-size: 14px;
+          font-weight: 400;
+          line-height: 1.5;
+          margin: 0;
+          margin-left: 40px; // Indent from profile image
+
+          .my-history-comment-timestamp {
+            color: #00b8ff;
+            font-size: 14px;
+            font-weight: 400;
+            text-decoration: underline;
+            margin-right: 4px;
+          }
+        }
+
+        .my-history-comment-actions {
+          display: flex;
+          align-items: center;
+          gap: 15px;
+          margin-left: 40px; // Indent from profile image
+          margin-top: 4px;
+
+          .my-history-like-btn,
+          .my-history-dislike-btn,
+          .my-history-reply-btn {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            background: none;
+            border: none;
+            color: #808191;
+            font-size: 13px;
+            font-weight: 500;
+            cursor: pointer;
+            padding: 0;
+            transition: color 0.2s;
+
+            svg {
+              width: 16px;
+              height: 16px;
+              color: #808191;
+            }
+
+            span {
+              color: #808191;
+            }
+
+            &:hover {
+              color: #fff;
+              svg {
+                color: #fff;
+              }
+              span {
+                color: #fff;
+              }
+            }
+          }
+
+          .my-history-reply-btn {
+            gap: 0;
+          }
+
+          .my-history-replies-link {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            color: #00b8ff;
+            font-size: 13px;
+            font-weight: 500;
+            text-decoration: none;
+            margin-left: auto;
+
+            svg {
+              width: 10px;
+              height: 8px;
+              color: #00b8ff;
+            }
+
+            span {
+              color: #00b8ff;
+            }
+
+            &:hover {
+              opacity: 0.8;
+            }
+          }
+        }
+
+        .my-history-comment-bonus {
+          position: absolute;
+          right: 0;
+          top: 0;
+          display: flex;
+          flex-direction: column;
+          align-items: flex-end;
+          gap: 2px;
+
+          .my-history-bonus-points,
+          .my-history-bonus-special {
+            color: #a0a0a0;
+            font-size: 12px;
+            font-weight: 400;
+            white-space: nowrap;
+          }
+        }
+      }
+    }
+  }
+
+  // Video List Styling (for liked videos)
+  .my-history-video-list {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin-bottom: 24px;
+
+    .my-history-video-item {
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+
+      .my-history-video-thumbnail {
+        width: 120px;
+        height: 80px;
+        border-radius: 8px;
+        overflow: hidden;
+        flex-shrink: 0;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+
+      .my-history-video-details {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+
+        .my-history-video-title {
+          color: #fff;
+          font-size: 16px;
+          font-weight: 600;
+          line-height: 1.4;
+          margin: 0;
+          display: -webkit-box;
+          -webkit-line-clamp: 2;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+
+        .my-history-channel-name {
+          color: #fff;
+          font-size: 13px;
+          font-weight: 400;
+          display: block;
+        }
+
+        .my-history-video-meta {
+          color: #fff;
+          font-size: 12px;
+          font-weight: 400;
+        }
+      }
+    }
+  }
+
+  // More Button
+  .my-history-more-btn {
+    display: block;
+    width: fit-content;
+    margin: 24px auto 0;
+    padding: 10px 20px;
+    background: none;
+    border: none;
+    color: #00b8ff;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: color 0.2s;
+
+    &:hover {
+      color: #0099cc;
+    }
+  }
+
+  // Mobile responsiveness
+  @media (max-width: 800px) {
+    padding: 0;
+
+    .container {
+      padding: 0;
+    }
+
+    .my-history-top {
+      display: none;
+    }
+
+    .my-history-section {
+      margin-bottom: 0;
+      padding: 20px;
+      padding-bottom: 20px;
+
+      &:not(:last-child) {
+        border-bottom: 1px solid #34373c;
+      }
+
+      &:not(:last-child)::after {
+        display: none;
+      }
+
+      .my-history-section-title {
+        font-size: 18px;
+        font-weight: 700;
+        margin-bottom: 16px;
+        padding-bottom: 8px;
+        padding-left: 0;
+
+        &::after {
+          height: 2px;
+        }
+      }
+    }
+
+    .my-history-comment-list {
+      gap: 16px;
+      margin-bottom: 16px;
+
+      .my-history-comment-item {
+        gap: 16px;
+
+        .my-history-comment-video-area {
+          flex-direction: row;
+          gap: 12px;
+          align-items: flex-start;
+
+          .my-history-video-thumbnail {
+            width: 120px;
+            height: 80px;
+            border-radius: 8px;
+            flex-shrink: 0;
+          }
+
+          .my-history-video-details {
+            flex: 1;
+
+            .my-history-video-title {
+              font-size: 15px;
+              line-height: 1.4;
+              margin-bottom: 4px;
+            }
+
+            .my-history-channel-name {
+              font-size: 12px;
+              display: block;
+              margin-bottom: 2px;
+            }
+
+            .my-history-video-meta {
+              font-size: 11px;
+            }
+          }
+        }
+
+        .my-history-comment-details-area {
+          padding-left: 0;
+
+          .my-history-comment-header {
+            gap: 8px;
+
+            .my-history-comment-profile {
+              width: 32px;
+              height: 32px;
+            }
+
+            .my-history-commenter-name {
+              font-size: 14px;
+              font-weight: 600;
+            }
+
+            .my-history-comment-time {
+              font-size: 12px;
+            }
+          }
+
+          .my-history-comment-text {
+            margin-left: 40px;
+            font-size: 14px;
+            line-height: 1.5;
+            margin-top: 4px;
+
+            .my-history-comment-timestamp {
+              font-size: 14px;
+            }
+          }
+
+          .my-history-comment-actions {
+            flex-wrap: wrap;
+            margin-left: 40px;
+            gap: 12px;
+            margin-top: 8px;
+
+            .my-history-like-btn,
+            .my-history-dislike-btn,
+            .my-history-reply-btn {
+              font-size: 13px;
+              font-weight: 500;
+
+              svg {
+                width: 16px;
+                height: 16px;
+              }
+            }
+
+            .my-history-replies-link {
+              display: none;
+            }
+          }
+
+          .my-history-comment-bonus {
+            display: none;
+          }
+        }
+      }
+    }
+
+    .my-history-video-list {
+      gap: 16px;
+      margin-bottom: 16px;
+
+      .my-history-video-item {
+        flex-direction: row;
+        gap: 12px;
+        align-items: flex-start;
+
+        .my-history-video-thumbnail {
+          width: 120px;
+          height: 80px;
+          border-radius: 8px;
+          flex-shrink: 0;
+        }
+
+        .my-history-video-details {
+          flex: 1;
+
+          .my-history-video-title {
+            font-size: 15px;
+            line-height: 1.4;
+            margin-bottom: 4px;
+          }
+
+          .my-history-channel-name {
+            font-size: 12px;
+            display: block;
+            margin-bottom: 2px;
+          }
+
+          .my-history-video-meta {
+            font-size: 11px;
+          }
+        }
+      }
+    }
+
+    .my-history-more-btn {
+      font-size: 14px;
+      padding: 10px 20px;
+      margin-top: 16px;
+    }
+  }
+}
