@@ -8,12 +8,10 @@
           <div class="subscribe-header-right">
             <span class="subscribe-management-text">구독관리</span>
             <div class="view-controls">
-              <button type="button" class="view-control-btn" :class="{ active: viewMode === 'grid' }"
-                @click="viewMode = 'grid'">
+              <button type="button" class="view-control-btn" :class="{ active: viewMode === 'grid' }" @click="viewMode = 'grid'">
                 <GridIcon class="icon" />
               </button>
-              <button type="button" class="view-control-btn" :class="{ active: viewMode === 'list' }"
-                @click="viewMode = 'list'">
+              <button type="button" class="view-control-btn" :class="{ active: viewMode === 'list' }" @click="viewMode = 'list'">
                 <ListIcon class="icon" />
               </button>
             </div>
@@ -21,7 +19,7 @@
         </div>
 
         <!-- Video Grid -->
-        <div class="subscribe-video-grid" :class="viewMode">
+        <div v-if="false" class="subscribe-video-grid" :class="viewMode">
           <div class="subscribe-video-card" v-for="i in 8" :key="i">
             <div class="subscribe-video-thumbnail">
               <img src="/images/video_thumbnail.png" alt="video-thumbnail" />
@@ -42,27 +40,13 @@
             </div>
           </div>
         </div>
+        <ActorList class="subscribe-video-list">
+          <ActorItem v-for="i in 8" :key="i" videoType="ranking" />
+        </ActorList>
 
         <!-- Pagination -->
         <div class="subscribe-pagination">
-          <button type="button" class="pagination-btn pagination-prev">
-            <ChevronLeftIcon class="icon" />
-          </button>
-          <div class="pagination-numbers">
-            <button type="button" class="pagination-number" :class="{ active: currentPage === 1 }"
-              @click="currentPage = 1">1</button>
-            <button type="button" class="pagination-number" :class="{ active: currentPage === 2 }"
-              @click="currentPage = 2">2</button>
-            <button type="button" class="pagination-number" :class="{ active: currentPage === 3 }"
-              @click="currentPage = 3">3</button>
-            <button type="button" class="pagination-number" :class="{ active: currentPage === 4 }"
-              @click="currentPage = 4">4</button>
-            <button type="button" class="pagination-number" :class="{ active: currentPage === 5 }"
-              @click="currentPage = 5">5</button>
-          </div>
-          <button type="button" class="pagination-btn pagination-next">
-            <ChevronRightIcon class="icon" />
-          </button>
+          <Pagination :current-page="currentPage" />
         </div>
       </article>
     </div>
@@ -72,10 +56,11 @@
 <script setup>
 import { ref } from "vue";
 import ActorImage from "@/components/actor/ActorImage.vue";
+import ActorList from "@/components/actor/ActorList.vue";
+import ActorItem from "@/components/actor/ActorItem.vue";
 import GridIcon from "@/assets/icons/icon20/grid_red.svg";
 import ListIcon from "@/assets/icons/icon20/list.svg";
-import ChevronLeftIcon from "@/assets/icons/icon24/chevron_left.svg";
-import ChevronRightIcon from "@/assets/icons/icon24/chevron_right.svg";
+import Pagination from "@/components/Pagination.vue";
 
 const viewMode = ref("grid");
 const currentPage = ref(1);
