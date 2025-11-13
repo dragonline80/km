@@ -19,18 +19,20 @@
                   설명 : {{ expandedDescriptions[index] ? channel.description : getTruncatedDescription(channel.description) }}
                 </span>
                 <button type="button" class="description-more-btn" v-if="channel.description.length > 40" @click="toggleDescription(index)">
-                  {{ expandedDescriptions[index] ? '접기' : '...더보기' }}
+                  {{ expandedDescriptions[index] ? "접기" : "...더보기" }}
                 </button>
               </div>
             </div>
             <div class="subscribe-channel-actions">
-              <button type="button" class="subscribe-unsubscribe-btn" v-if="index === channels.length - 1" @click="unsubscribe(index)">
-                <UserXIcon class="icon" />
-                <span>구독취소</span>
-              </button>
-              <button type="button" class="subscribe-more-btn" v-else>
-                <MoreVerticalIcon class="icon" />
-              </button>
+              <div class="subscribe-action-menu">
+                <button type="button" class="subscribe-more-btn" @click="toggleAction(index)">
+                  <MoreVerticalIcon class="icon" />
+                </button>
+                <button type="button" class="subscribe-unsubscribe-btn" v-if="expandedActions[index]" @click="unsubscribe(index)">
+                  <UserXIcon class="icon" />
+                  <span>구독취소</span>
+                </button>
+              </div>
             </div>
           </div>
         </div>
@@ -40,9 +42,7 @@
 
         <!-- Footer Action -->
         <div class="subscribe-setting-footer">
-          <button type="button" class="subscribe-reset-btn" @click="resetSubscriptions">
-            구독 초기화
-          </button>
+          <button type="button" class="subscribe-reset-btn" @click="resetSubscriptions">구독 초기화</button>
         </div>
       </article>
     </div>
@@ -64,21 +64,25 @@ const channels = ref([
   {
     name: "채널이름",
     createdAt: "2025.02.09",
-    description: "설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명",
+    description:
+      "설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명",
   },
   {
     name: "채널이름",
     createdAt: "2025.02.09",
-    description: "설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명",
+    description:
+      "설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명",
   },
   {
     name: "채널이름",
     createdAt: "2025.02.09",
-    description: "설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명",
+    description:
+      "설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명",
   },
 ]);
 
 const expandedDescriptions = ref({});
+const expandedActions = ref({});
 
 const getTruncatedDescription = (description) => {
   if (description.length <= 40) return description;
@@ -89,9 +93,14 @@ const toggleDescription = (index) => {
   expandedDescriptions.value[index] = !expandedDescriptions.value[index];
 };
 
+const toggleAction = (index) => {
+  expandedActions.value[index] = !expandedActions.value[index];
+};
+
 const unsubscribe = (index) => {
   // 구독 취소 로직
   console.log("Unsubscribe channel:", index);
+  expandedActions.value[index] = false;
 };
 
 const resetSubscriptions = () => {
@@ -99,4 +108,3 @@ const resetSubscriptions = () => {
   console.log("Reset subscriptions");
 };
 </script>
-
