@@ -54,7 +54,6 @@
 
   // Top User Info
   .table-post-top {
-    position: relative;
     padding-top: 18px;
     padding-bottom: 55px;
     text-align: center;
@@ -239,7 +238,6 @@
     }
 
     .table-post-back {
-      // position: static;
       top: 50%;
       transform: translateY(-50%);
       left: 0;
@@ -257,6 +255,7 @@
     }
 
     .table-post-top {
+      position: relative;
       padding-top: 0;
       padding-bottom: 24px;
 
@@ -324,6 +323,60 @@
         .table-post-btn-ok {
           padding: 8px 20px;
           font-size: 14px;
+        }
+      }
+    }
+  }
+}
+
+body {
+  &.light-mode {
+    .content.table-post {
+      .table-post-top {
+        .table-post-title {
+          color: #2c2f3a;
+        }
+
+        .table-post-top-info {
+          .table-post-top-name {
+            color: #2c2f3a;
+          }
+        }
+      }
+
+      .table-post-title-mobile {
+        color: #2c2f3a;
+      }
+
+      .table-post-form {
+        .table-post-form-group {
+          .table-post-form-label {
+            background: #fff;
+            color: #4a4d5a;
+          }
+
+          .table-post-form-input,
+          .table-post-form-textarea {
+            color: #2c2f3a;
+          }
+        }
+
+        .table-post-form-actions {
+          .table-post-btn-cancel {
+            color: #2c2f3a;
+
+            &:hover {
+              background: rgba(0, 0, 0, 0.08);
+            }
+          }
+
+          .table-post-btn-ok {
+            color: #2c2f3a;
+
+            &:hover {
+              background: #e5e5e5;
+            }
+          }
         }
       }
     }

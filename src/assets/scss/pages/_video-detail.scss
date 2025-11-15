@@ -590,3 +590,118 @@
     }
   }
 }
+
+body {
+  &.light-mode {
+    .content.video-detail {
+      .container {
+        .video-content-container {
+          .video-container {
+            .video-info {
+              .video-title {
+                color: #2c2f3a;
+              }
+
+              .video-title-view-info {
+                button {
+                  color: #2c2f3a;
+                }
+              }
+
+              .video-comment-container {
+                background: #f8f8f8;
+
+                .video-comment-text {
+                  color: #2c2f3a;
+                }
+
+                .video-comment-profile {
+                  .video-comment-profile-text {
+                    color: #2c2f3a;
+                  }
+                }
+              }
+
+              .video-info-content {
+                .actor-profile {
+                  p {
+                    color: #2c2f3a;
+                  }
+                }
+
+                .video-info-buttons {
+                  .video-info-thumbs-buttons,
+                  .video-info-bookmark-button {
+                    background: #f8f8f8;
+                  }
+                }
+              }
+
+              .video-description {
+                background: #f8f8f8;
+
+                .video-description-view-info {
+                  color: #2c2f3a;
+                }
+
+                .video-description-content {
+                  color: #2c2f3a;
+
+                  .video-description-more {
+                    color: #2c2f3a;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .comment-container {
+        .comment-header {
+          .comment-view-info {
+            .comment-text {
+              color: #2c2f3a;
+            }
+
+            .comment-view-info-text {
+              color: #2c2f3a;
+            }
+
+            .comment-view-info-sort-button {
+              span {
+                color: #2c2f3a;
+              }
+            }
+          }
+        }
+
+        .comment-content {
+          .comment-item {
+            .comment-info {
+              .comment-item-header {
+                .comment-item-header-name {
+                  color: #2c2f3a;
+                }
+              }
+
+              .comment-item-content {
+                .comment {
+                  span {
+                    color: #2c2f3a;
+                  }
+                }
+              }
+
+              .comment-item-footer {
+                .comment-item-reply-button {
+                  color: #2c2f3a;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

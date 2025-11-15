@@ -596,3 +596,71 @@
     }
   }
 }
+
+body {
+  &.light-mode {
+    .my-history {
+      .my-history-top {
+        .my-history-top-info {
+          .my-history-top-name {
+            color: #000;
+          }
+        }
+      }
+
+      .my-history-section {
+        .my-history-section-title {
+          color: #000;
+        }
+      }
+
+      .my-history-comment-list {
+        .my-history-comment-item {
+          .my-history-comment-video-area {
+            .my-history-video-details {
+              .my-history-video-title {
+                color: #000;
+              }
+
+              .my-history-channel-name {
+                color: #000;
+              }
+
+              .my-history-video-meta {
+                color: #ccc;
+              }
+            }
+          }
+
+          .my-history-comment-details-area {
+            .my-history-commenter-name {
+              color: #000;
+            }
+
+            .my-history-comment-text {
+              color: #000;
+            }
+          }
+        }
+      }
+
+      .my-history-video-list {
+        .my-history-video-item {
+          .my-history-video-details {
+            .my-history-video-title {
+              color: #000;
+            }
+
+            .my-history-channel-name {
+              color: #000;
+            }
+
+            .my-history-video-meta {
+              color: #000;
+            }
+          }
+        }
+      }
+    }
+  }
+}

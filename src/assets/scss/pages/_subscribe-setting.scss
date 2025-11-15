@@ -278,3 +278,44 @@
     padding-top: 28px;
   }
 }
+
+body {
+  &.light-mode {
+    .content.subscribe-setting {
+      .container {
+        .subscribe-setting-container {
+          .subscribe-setting-header {
+            .subscribe-setting-title {
+              color: #000;
+            }
+          }
+          .subscribe-channel-list {
+            .subscribe-channel-item {
+              .subscribe-channel-info {
+                .subscribe-channel-name {
+                  color: #000;
+                }
+                .subscribe-channel-description {
+                  .description-more-btn {
+                    color: #000;
+                  }
+                }
+              }
+
+              .subscribe-channel-actions {
+                .subscribe-unsubscribe-btn {
+                  span {
+                    color: #fff;
+                  }
+                  path {
+                    stroke: #fff;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -361,3 +361,73 @@
     }
   }
 }
+
+body {
+  &.light-mode {
+    .content.table-list {
+      .container {
+        .table-list-container {
+          .table-list-header {
+            .table-list-header-left {
+              .table-list-title {
+                color: #2c2f3a;
+              }
+            }
+          }
+
+          .table-list-desktop {
+            background: transparent;
+            border: 0;
+
+            .table-list-row {
+              border: 0;
+
+              &--head {
+                background: transparent;
+                border-bottom: 1px solid #ccc;
+              }
+
+              .table-list-cell {
+                color: #4a4d5a;
+
+                &--title {
+                  .table-list-text {
+                    .table-list-request-title {
+                      color: #2c2f3a;
+                    }
+                  }
+                }
+              }
+            }
+          }
+
+          .table-list-mobile {
+            .table-list-card {
+              .table-list-card-left {
+                .table-list-card-info {
+                  .table-list-card-title {
+                    color: #2c2f3a;
+                  }
+                }
+              }
+            }
+          }
+
+          .table-list-pagination {
+            .pagination-arrow {
+              .icon {
+                color: #4a4d5a;
+              }
+            }
+
+            .pagination-numbers {
+              .pagination-number {
+                color: #4a4d5a;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

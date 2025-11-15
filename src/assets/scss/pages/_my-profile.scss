@@ -369,3 +369,46 @@
     }
   }
 }
+
+body {
+  &.light-mode {
+    .my-profile {
+      .my-profile-container {
+        .my-profile-top {
+          .my-profile-top-name {
+            color: #000;
+          }
+        }
+      }
+      .my-profile-section {
+        .my-profile-section-header {
+          .my-profile-section-title {
+            color: #000;
+          }
+        }
+        .my-profile-form-group {
+          .my-profile-form-label {
+            background: #fff;
+            color: #000;
+          }
+        }
+        .my-profile-form-actions {
+          .my-profile-btn-cancel {
+            color: #000;
+
+            &:hover {
+              background: rgba(0, 0, 0, 0.08);
+            }
+          }
+          .my-profile-btn-ok {
+            color: #000;
+
+            &:hover {
+              background: #e5e5e5;
+            }
+          }
+        }
+      }
+    }
+  }
+}

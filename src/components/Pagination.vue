@@ -35,7 +35,7 @@ const currentPage = defineModel("currentPage", {
 });
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 .pagination-container {
   display: flex;
   justify-content: center;
@@ -85,6 +85,54 @@ const currentPage = defineModel("currentPage", {
 
   @media (max-width: 800px) {
     padding: 0 20px 40px;
+  }
+}
+
+body {
+  &.light-mode {
+    .pagination-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 12px;
+      padding-bottom: 40px;
+
+      .pagination-btn {
+        width: 40px;
+        height: 40px;
+        display: flex;
+        font-size: 12px;
+        align-items: center;
+        justify-content: center;
+        background: #404040;
+        border: none;
+        border-radius: 50%;
+        cursor: pointer;
+        color: #fff;
+        transition: all 0.2s;
+
+        &.pagination-arrow {
+          &:hover {
+            opacity: 0.7;
+          }
+
+          .icon {
+            width: 18px;
+            height: 18px;
+          }
+        }
+        &.pagination-number {
+          &:hover {
+            background: #3c3c3c;
+          }
+
+          &.active {
+            background: #cdcdcd;
+            color: #000000;
+          }
+        }
+      }
+    }
   }
 }
 </style>

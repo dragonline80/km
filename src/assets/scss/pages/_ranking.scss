@@ -74,3 +74,33 @@
     padding-top: 28px;
   }
 }
+
+body {
+  &.light-mode {
+    .content.ranking {
+      .container {
+        .ranking-video-container {
+          .category-container {
+            .category-list {
+              .category-item {
+                background: #f0f0f0;
+
+                .category-item-title {
+                  color: #2c2f3a;
+                }
+
+                &.active {
+                  background: #2c2f3a;
+
+                  .category-item-title {
+                    color: #fff;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

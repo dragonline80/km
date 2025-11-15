@@ -343,3 +343,42 @@
     padding-top: 28px;
   }
 }
+
+body {
+  &.light-mode {
+    .content.subscribe-small {
+      .container {
+        .subscribe-container {
+          .subscribe-header {
+            .subscribe-title {
+              color: #000;
+            }
+          }
+
+          .subscribe-video-list {
+            .subscribe-video-item {
+              background: transparent;
+              border: 0;
+
+              .subscribe-video-content {
+                .subscribe-video-title {
+                  color: #000;
+                }
+
+                .subscribe-channel-header {
+                  .subscribe-channel-right {
+                    .subscribe-channel-info {
+                      .subscribe-channel-name {
+                        color: #000;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

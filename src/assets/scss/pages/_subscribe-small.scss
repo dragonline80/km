@@ -282,3 +282,19 @@
     padding-top: 28px;
   }
 }
+
+body {
+  &.light-mode {
+    .content.subscribe-small {
+      .container {
+        .subscribe-container {
+          .subscribe-header {
+            .subscribe-management-text {
+              color: #00b8ff;
+            }
+          }
+        }
+      }
+    }
+  }
+}

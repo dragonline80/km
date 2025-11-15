@@ -33,7 +33,7 @@ defineProps({
   },
 });
 </script>
-<style lang="scss" scoped>
+<style lang="scss">
 .actor-info-image {
   position: relative;
   aspect-ratio: 1/1;
@@ -94,6 +94,25 @@ defineProps({
     }
     .pc {
       display: none;
+    }
+  }
+}
+
+body {
+  &.light-mode {
+    .actor-info-image {
+      border: 1px solid rgba(15, 16, 35, 0.5);
+
+      .certification-icon {
+        svg {
+          rect {
+            stroke: #fff !important;
+          }
+          path {
+            stroke: #000 !important;
+          }
+        }
+      }
     }
   }
 }

@@ -97,4 +97,24 @@
     }
   }
 }
+
+body.light-mode {
+  .video-item {
+    .video-item-image {
+      .video-item-image-time {
+        span {
+          color: #2c2f3a;
+        }
+      }
+    }
+
+    .video-item-content {
+      .video-item-header {
+        .video-item-title {
+          color: #2c2f3a;
+        }
+      }
+    }
+  }
+}
 </style>

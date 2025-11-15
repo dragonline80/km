@@ -176,4 +176,22 @@ defineProps({
     }
   }
 }
+
+body {
+  &.light-mode {
+    .actor-credit-item-content {
+      .actor-credit-item-title-container {
+        .actor-credit-item-title {
+          color: #0f1023;
+        }
+      }
+
+      .actor-credit-item-description-container {
+        .actor-credit-item-description {
+          color: #000;
+        }
+      }
+    }
+  }
+}
 </style>

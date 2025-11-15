@@ -289,3 +289,63 @@
     padding-top: 28px;
   }
 }
+
+body {
+  &.light-mode {
+    .content.home {
+      .container {
+        .feed-container {
+          .category-container {
+            .category-list {
+              .category-item {
+                background: #f0f0f0;
+
+                .category-item-title {
+                  color: #2c2f3a;
+                }
+
+                &.active {
+                  background: #2c2f3a;
+
+                  .category-item-title {
+                    color: #fff;
+                  }
+                }
+              }
+            }
+          }
+
+          .feed-list {
+            .feed-item {
+              .feed-title {
+                color: #2c2f3a;
+              }
+
+              .feed-content {
+                .feed-actor-container {
+                  .feed-actor-info-container {
+                    .feed-actor-info {
+                      .feed-actor-name {
+                        color: #2c2f3a;
+                      }
+
+                      .feed-actor-view-info {
+                        color: #4a4d5a;
+                      }
+                    }
+                  }
+                }
+              }
+
+              .feed-content-list {
+                li {
+                  color: #2c2f3a;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
