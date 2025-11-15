@@ -29,8 +29,8 @@
                   <MoreVerticalIcon class="icon" />
                 </button>
                 <button type="button" class="subscribe-unsubscribe-btn" v-if="expandedActions[index]" @click="unsubscribe(index)">
-                  <UserXIcon class="icon" />
                   <span>구독취소</span>
+                  <UserXIcon class="icon" />
                 </button>
               </div>
             </div>
@@ -53,7 +53,7 @@
 import { ref } from "vue";
 import ActorImage from "@/components/actor/ActorImage.vue";
 import MoreVerticalIcon from "@/assets/icons/icon20/more_vertical.svg";
-import UserXIcon from "@/assets/icons/icon20/user_x.svg";
+import UserXIcon from "@/assets/icons/icon24/user_x.svg";
 
 const channels = ref([
   {

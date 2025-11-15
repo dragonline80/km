@@ -83,7 +83,7 @@
     .my-profile-section-content {
       display: flex;
       flex-direction: column;
-      gap: 24px;
+      gap: 38px;
     }
   }
 
@@ -100,7 +100,7 @@
       overflow: hidden;
       background: #fff;
       flex-shrink: 0;
-      border: 4px solid #ff8c00;
+      // border: 4px solid #ff8c00;
 
       img {
         width: 100%;
@@ -118,8 +118,8 @@
       .my-profile-attach-btn {
         width: 100%;
         padding: 12px 24px;
-        background: #2c2c2c;
-        border: 1px solid #5a5a5a;
+        background: #404040;
+        // border: 1px solid #5a5a5a;
         border-radius: 8px;
         color: #fff;
         font-size: 14px;
@@ -134,13 +134,13 @@
       }
 
       .my-profile-avatar-grid {
-        display: grid;
-        grid-template-columns: repeat(5, 1fr);
+        display: flex;
         gap: 12px;
+        flex-wrap: wrap;
 
         .my-profile-avatar-item {
-          width: 100%;
-          aspect-ratio: 1;
+          width: 40px;
+          height: 40px;
           border-radius: 50%;
           overflow: hidden;
           background: #2c2c2c;
@@ -148,6 +148,7 @@
           cursor: pointer;
           transition: all 0.2s;
           padding: 0;
+          flex-shrink: 0;
 
           img {
             width: 100%;
@@ -184,9 +185,9 @@
         left: 12px;
         background: #1f1d2b;
         padding: 0 4px;
-        color: #fff;
-        font-size: 14px;
-        font-weight: 500;
+        color: #d9d9d9;
+        font-size: 12px;
+        font-weight: 400;
         line-height: 1.5;
         z-index: 1;
       }
@@ -194,7 +195,7 @@
       .my-profile-form-input {
         width: 100%;
         padding: 12px 16px;
-        background: #2c2c2c;
+        background: transparent;
         border: 1px solid #5a5a5a;
         border-radius: 8px;
         color: #fff;
@@ -212,7 +213,7 @@
         }
 
         &.disabled {
-          background: #2c2c2c;
+          background: transparent;
           color: #808191;
           cursor: not-allowed;
         }
@@ -248,10 +249,10 @@
       }
 
       .my-profile-btn-ok {
-        background: #2c2c2c;
+        // background: #2c2c2c;
         color: #fff;
-        border: 1px solid #5a5a5a;
-        border-radius: 6px;
+        // border: 1px solid #5a5a5a;
+        // border-radius: 6px;
 
         &:hover {
           background: #34373c;
@@ -276,7 +277,7 @@
     padding: 20px 0;
 
     .container {
-      padding: 0 20px;
+      padding: 0 20px !important;
     }
 
     .my-profile-top {
@@ -309,8 +310,8 @@
       gap: 12px;
 
       .my-profile-current-image {
-        width: 80px;
-        height: 80px;
+        width: 88px;
+        height: 88px;
         border-width: 3px;
       }
 
@@ -320,23 +321,33 @@
 
         .my-profile-attach-btn {
           width: 100%;
+          font-size: 13px;
+          padding: 10px 20px;
+          height: 40px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
         }
 
         .my-profile-avatar-grid {
-          grid-template-columns: repeat(5, 1fr);
           gap: 8px;
+
+          .my-profile-avatar-item {
+            width: 40px;
+            height: 40px;
+          }
         }
       }
     }
 
     .my-profile-form-section {
       gap: 16px;
-
-      .my-profile-form-group {
+      i .my-profile-form-group {
         .my-profile-form-label {
           font-size: 12px;
           top: -6px;
           left: 10px;
+          background: inherit;
         }
 
         .my-profile-form-input {
@@ -358,4 +369,3 @@
     }
   }
 }
-

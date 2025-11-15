@@ -62,7 +62,7 @@
   .my-history-section {
     margin-bottom: 40px;
     position: relative;
-    padding-bottom: 40px;
+    padding-bottom: 15px;
 
     &:not(:last-child)::after {
       content: "";
@@ -166,43 +166,45 @@
       }
 
       .my-history-comment-details-area {
-        display: flex;
-        flex-direction: column;
-        gap: 8px;
+        // display: flex;
+        // flex-direction: column;
+        // gap: 8px;
         position: relative;
         padding-left: 0; // Align with video thumbnail start
+
+        display: flex;
+        gap: 8px;
 
         .my-history-comment-header {
           display: flex;
           align-items: center;
           gap: 8px;
+        }
+        .my-history-comment-profile {
+          width: 32px;
+          height: 32px;
+          border-radius: 50%;
+          overflow: hidden;
+          background: #fff;
+          flex-shrink: 0;
 
-          .my-history-comment-profile {
-            width: 32px;
-            height: 32px;
-            border-radius: 50%;
-            overflow: hidden;
-            background: #fff;
-            flex-shrink: 0;
-
-            img {
-              width: 100%;
-              height: 100%;
-              object-fit: cover;
-            }
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
           }
+        }
 
-          .my-history-commenter-name {
-            color: #fff;
-            font-size: 14px;
-            font-weight: 600;
-          }
+        .my-history-commenter-name {
+          color: #fff;
+          font-size: 14px;
+          font-weight: 600;
+        }
 
-          .my-history-comment-time {
-            color: #808191;
-            font-size: 12px;
-            font-weight: 400;
-          }
+        .my-history-comment-time {
+          color: #808191;
+          font-size: 12px;
+          font-weight: 400;
         }
 
         .my-history-comment-text {
@@ -211,7 +213,8 @@
           font-weight: 400;
           line-height: 1.5;
           margin: 0;
-          margin-left: 40px; // Indent from profile image
+          padding-bottom: 6px;
+          // margin-left: 40px; // Indent from profile image
 
           .my-history-comment-timestamp {
             color: #00b8ff;
@@ -224,10 +227,21 @@
 
         .my-history-comment-actions {
           display: flex;
-          align-items: center;
-          gap: 15px;
-          margin-left: 40px; // Indent from profile image
+          flex-direction: column;
+          // margin-left: 40px; // Indent from profile image
           margin-top: 4px;
+
+          .my-history-comment-actions-control {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+          }
+          .my-history-comment-actions-replies {
+            display: flex;
+            justify-content: flex-start;
+            padding-top: 8px;
+            padding-left: 14px;
+          }
 
           .my-history-like-btn,
           .my-history-dislike-btn,
@@ -245,8 +259,8 @@
             transition: color 0.2s;
 
             svg {
-              width: 16px;
-              height: 16px;
+              width: 20px;
+              height: 20px;
               color: #808191;
             }
 
@@ -277,16 +291,11 @@
             font-size: 13px;
             font-weight: 500;
             text-decoration: none;
-            margin-left: auto;
-
-            svg {
-              width: 10px;
-              height: 8px;
-              color: #00b8ff;
-            }
 
             span {
               color: #00b8ff;
+              font-size: 10px;
+              font-weight: 800;
             }
 
             &:hover {
@@ -298,7 +307,7 @@
         .my-history-comment-bonus {
           position: absolute;
           right: 0;
-          top: 0;
+          top: 16px;
           display: flex;
           flex-direction: column;
           align-items: flex-end;
@@ -381,13 +390,13 @@
   .my-history-more-btn {
     display: block;
     width: fit-content;
-    margin: 24px auto 0;
+    margin: 36px auto 0;
     padding: 10px 20px;
     background: none;
     border: none;
-    color: #00b8ff;
-    font-size: 14px;
-    font-weight: 500;
+    color: #3ea6ff;
+    font-size: 10px;
+    font-weight: 800;
     cursor: pointer;
     transition: color 0.2s;
 
@@ -483,6 +492,12 @@
             .my-history-comment-profile {
               width: 32px;
               height: 32px;
+
+              img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+              }
             }
 
             .my-history-commenter-name {
@@ -496,7 +511,7 @@
           }
 
           .my-history-comment-text {
-            margin-left: 40px;
+            // margin-left: 40px;
             font-size: 14px;
             line-height: 1.5;
             margin-top: 4px;
@@ -508,7 +523,7 @@
 
           .my-history-comment-actions {
             flex-wrap: wrap;
-            margin-left: 40px;
+            // margin-left: 40px;
             gap: 12px;
             margin-top: 8px;
 

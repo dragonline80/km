@@ -7,9 +7,7 @@
             <h2 class="table-list-title">자료요청</h2>
             <span class="table-list-count">총 {{ requests.length }}건</span>
           </div>
-          <button type="button" class="table-list-link">
-            영상요청
-          </button>
+          <button type="button" class="table-list-link">영상요청</button>
         </header>
 
         <div class="table-list-desktop">
@@ -62,21 +60,7 @@
           </div>
         </div>
 
-        <nav class="table-list-pagination">
-          <button type="button" class="pagination-arrow" :class="{ disabled: currentPage === 1 }" @click="goPrevPage">
-            <ChevronLeftIcon class="icon" />
-          </button>
-          <div class="pagination-numbers">
-            <button v-for="page in pages" :key="`page-${page}`" type="button" class="pagination-number"
-              :class="{ active: currentPage === page }" @click="goToPage(page)">
-              {{ page }}
-            </button>
-          </div>
-          <button type="button" class="pagination-arrow" :class="{ disabled: currentPage === totalPages }"
-            @click="goNextPage">
-            <ChevronRightIcon class="icon" />
-          </button>
-        </nav>
+        <Pagination :current-page="currentPage" />
       </article>
     </div>
   </section>
@@ -85,10 +69,9 @@
 <script setup>
 import { computed, ref } from "vue";
 
-import CheckIcon from "@/assets/icons/icon12/check.svg";
-import DownloadIcon from "@/assets/icons/icon16/download.svg";
-import ChevronLeftIcon from "@/assets/icons/icon24/chevron_left.svg";
-import ChevronRightIcon from "@/assets/icons/icon24/chevron_right.svg";
+import CheckIcon from "@/assets/icons/icon20/circel_green_check.svg";
+import DownloadIcon from "@/assets/icons/icon22/cricle_download.svg";
+import Pagination from "@/components/Pagination.vue";
 
 const requests = ref([
   {

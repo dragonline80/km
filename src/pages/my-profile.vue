@@ -5,7 +5,7 @@
         <!-- Top User Info -->
         <div class="my-profile-top">
           <div class="my-profile-top-avatar">
-            <img src="/images/header_profile.png" alt="profile" />
+            <img src="/images/my_profile_small.png" alt="profile" />
           </div>
           <div class="my-profile-top-info">
             <h3 class="my-profile-top-name">도베르만</h3>
@@ -23,12 +23,10 @@
           <div class="my-profile-section-content">
             <div class="my-profile-image-section">
               <div class="my-profile-current-image">
-                <img src="/images/header_profile.png" alt="current profile" />
+                <img src="/images/my_profile_big.png" alt="profile" />
               </div>
               <div class="my-profile-image-actions">
-                <button type="button" class="my-profile-attach-btn" @click="handleAttachImage">
-                  이미지 첨부
-                </button>
+                <button type="button" class="my-profile-attach-btn" @click="handleAttachImage">이미지 첨부</button>
                 <div class="my-profile-avatar-grid">
                   <button
                     type="button"
@@ -47,30 +45,15 @@
             <div class="my-profile-form-section">
               <div class="my-profile-form-group">
                 <label class="my-profile-form-label">닉네임</label>
-                <input
-                  type="text"
-                  class="my-profile-form-input"
-                  v-model="nickname"
-                  placeholder="닉네임"
-                />
+                <input type="text" class="my-profile-form-input" v-model="nickname" placeholder="닉네임" />
               </div>
               <div class="my-profile-form-group">
                 <label class="my-profile-form-label">아이디(변경불가)</label>
-                <input
-                  type="text"
-                  class="my-profile-form-input disabled"
-                  v-model="userId"
-                  disabled
-                  placeholder="아이디"
-                />
+                <input type="text" class="my-profile-form-input disabled" v-model="userId" disabled placeholder="아이디" />
               </div>
               <div class="my-profile-form-actions">
-                <button type="button" class="my-profile-btn-cancel" @click="handleCancelProfile">
-                  Cancel
-                </button>
-                <button type="button" class="my-profile-btn-ok" @click="handleSaveProfile">
-                  OK
-                </button>
+                <button type="button" class="my-profile-btn-cancel" @click="handleCancelProfile">Cancel</button>
+                <button type="button" class="my-profile-btn-ok" @click="handleSaveProfile">OK</button>
               </div>
             </div>
           </div>
@@ -87,38 +70,19 @@
             <div class="my-profile-form-section">
               <div class="my-profile-form-group">
                 <label class="my-profile-form-label">현재 비밀번호</label>
-                <input
-                  type="password"
-                  class="my-profile-form-input"
-                  v-model="currentPassword"
-                  placeholder="현재 비밀번호"
-                />
+                <input type="password" class="my-profile-form-input" v-model="currentPassword" placeholder="현재 비밀번호" />
               </div>
               <div class="my-profile-form-group">
                 <label class="my-profile-form-label">변경할 비밀번호</label>
-                <input
-                  type="password"
-                  class="my-profile-form-input"
-                  v-model="newPassword"
-                  placeholder="변경할 비밀번호"
-                />
+                <input type="password" class="my-profile-form-input" v-model="newPassword" placeholder="변경할 비밀번호" />
               </div>
               <div class="my-profile-form-group">
                 <label class="my-profile-form-label">변경할 비밀번호 재입력</label>
-                <input
-                  type="password"
-                  class="my-profile-form-input"
-                  v-model="confirmPassword"
-                  placeholder="변경할 비밀번호 재입력"
-                />
+                <input type="password" class="my-profile-form-input" v-model="confirmPassword" placeholder="변경할 비밀번호 재입력" />
               </div>
               <div class="my-profile-form-actions">
-                <button type="button" class="my-profile-btn-cancel" @click="handleCancelPassword">
-                  Cancel
-                </button>
-                <button type="button" class="my-profile-btn-ok" @click="handleSavePassword">
-                  OK
-                </button>
+                <button type="button" class="my-profile-btn-cancel" @click="handleCancelPassword">Cancel</button>
+                <button type="button" class="my-profile-btn-ok" @click="handleSavePassword">OK</button>
               </div>
             </div>
           </div>
@@ -130,9 +94,7 @@
           <div class="my-profile-section-content">
             <div class="my-profile-form-section">
               <div class="my-profile-form-actions">
-                <button type="button" class="my-profile-btn-delete" @click="handleDeleteAccount">
-                  계정삭제
-                </button>
+                <button type="button" class="my-profile-btn-delete" @click="handleDeleteAccount">계정삭제</button>
               </div>
             </div>
           </div>
@@ -153,16 +115,14 @@ const confirmPassword = ref("");
 const selectedAvatar = ref(0);
 
 const avatars = ref([
-  "/images/header_profile.png",
-  "/images/header_profile.png",
-  "/images/header_profile.png",
-  "/images/header_profile.png",
-  "/images/header_profile.png",
-  "/images/header_profile.png",
-  "/images/header_profile.png",
-  "/images/header_profile.png",
-  "/images/header_profile.png",
-  "/images/header_profile.png",
+  "/images/my_profile_001.png",
+  "/images/my_profile_002.png",
+  "/images/my_profile_003.png",
+  "/images/my_profile_004.png",
+  "/images/my_profile_005.png",
+  "/images/my_profile_006.png",
+  "/images/my_profile_007.png",
+  "/images/my_profile_008.png",
 ]);
 
 const selectAvatar = (index) => {
@@ -195,4 +155,3 @@ const handleDeleteAccount = () => {
   console.log("Delete account");
 };
 </script>
-

@@ -61,8 +61,8 @@
 <script setup>
 import { ref } from "vue";
 import ActorImage from "@/components/actor/ActorImage.vue";
-import GridIcon from "@/assets/icons/icon20/grid_red.svg";
-import ListIcon from "@/assets/icons/icon20/list.svg";
+import GridIcon from "@/assets/icons/icon20/group_white.svg";
+import ListIcon from "@/assets/icons/icon20/list_red.svg";
 import Pagination from "@/components/Pagination.vue";
 import MoreVerticalIcon from "@/assets/icons/icon20/more_vertical.svg";
 

@@ -58,8 +58,8 @@ import { ref } from "vue";
 import ActorImage from "@/components/actor/ActorImage.vue";
 import ActorList from "@/components/actor/ActorList.vue";
 import ActorItem from "@/components/actor/ActorItem.vue";
-import GridIcon from "@/assets/icons/icon20/grid_red.svg";
-import ListIcon from "@/assets/icons/icon20/list.svg";
+import GridIcon from "@/assets/icons/icon20/group_red.svg";
+import ListIcon from "@/assets/icons/icon20/list_white.svg";
 import Pagination from "@/components/Pagination.vue";
 
 const viewMode = ref("grid");
